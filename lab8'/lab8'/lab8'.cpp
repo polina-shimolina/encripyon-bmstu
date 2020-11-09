@@ -14,8 +14,8 @@ int main()
 	int j; //номер буквы в ct
 	char* arr = new char[st.size() + 1]; //строка итоговая
 	char* ar = new char[st.size() + 1]; //строка итоговая в цифрах
-	char* starr = new char[st.size() + 1];//первоначальная строка
-	string ct = "aaaaaaaaa gagrwjt dstgreyt vfmfter jtdygdrht rdjyrj";
+	char* starr = new char[st.size() + 1]; //первоначальная строка
+	string ct = "gfkjh gagrwjt dstgreyt vfmfter jtdygdrht rdjyrj hj jkh gjhg fkjh hjf h";
 	int f = 1;
 	for (int i = 0; i < ct.size(); i++) {
 		if (ct[i] == 32)f++;
@@ -23,19 +23,10 @@ int main()
 	int* newmas = new int[f];
 	int k = 0;
 	for (int i = 0; i < ct.size(); i++) {
-		if (ct[i] != 32) {
-			newmas[k] += (int)ct[i];
-			/*cout << (int)ct[i] << " ";*/
-		}
-		else {
-			k++;
-			/*cout << "    ";*/
-		}
+		if (ct[i] != 32)newmas[k] += (int)ct[i];
+		else k++;
 	}
-	/*for (int i = 0; i < f; i++) {
-		cout << (int)newmas[i] << " ";
-	}*/
-	cout << endl;
+
 	for (int i = 0; i < st.size(); i++) {
 
 		j = i;
@@ -61,7 +52,7 @@ int main()
 			while (j > k) {
 				j -= k;
 			}
-		int f = (int)ar[i] - (int)newmas[j] + 256 - 48;
+		int f = (int)ar[i] - (int)newmas[j] + 208;
 		starr[i] = f + '0';
 	}
 	starr[st.size()] = 0;
@@ -69,13 +60,14 @@ int main()
 	// двумерная матрица 256*256 слева исходный символ, сверху как зашифрован на пересечениях прибавлять 1, вывести все не равное нулю
 	int a[256][256] = {};
 	for (int i = 0; i < st.size(); i++) {
-		a[(int)st[i]][(int)arr[i]]++;
+		a[(int)st[i]+1][(int)arr[i]]++;
 	}
+	cout << endl;
 	for (int i = 0; i < 256; i++) {
-		cout << (char)i;
+		cout << i<<" "<<(char)i;
 		for (int j = 0; j < 256; j++) {
 			if (a[i][j] != 0) {
-				cout << "  " << (char)j << " (" << a[i][j] << ")        ";
+				cout << "  " << (char)j << " (" << a[i][j] << ")   ";
 			}
 		}
 		cout << endl;

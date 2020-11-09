@@ -1,7 +1,7 @@
 ﻿  lab8'.cpp
 C:\Users\Полина\source\repos\lab8'\lab8'\lab8'.cpp(20,20): warning C4018: <: несоответствие типов со знаком и без знака
 C:\Users\Полина\source\repos\lab8'\lab8'\lab8'.cpp(25,20): warning C4018: <: несоответствие типов со знаком и без знака
-C:\Users\Полина\source\repos\lab8'\lab8'\lab8'.cpp(39,20): warning C4018: <: несоответствие типов со знаком и без знака
-C:\Users\Полина\source\repos\lab8'\lab8'\lab8'.cpp(56,20): warning C4018: <: несоответствие типов со знаком и без знака
-C:\Users\Полина\source\repos\lab8'\lab8'\lab8'.cpp(71,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Полина\source\repos\lab8'\lab8'\lab8'.cpp(38,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Полина\source\repos\lab8'\lab8'\lab8'.cpp(55,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Полина\source\repos\lab8'\lab8'\lab8'.cpp(70,20): warning C4018: <: несоответствие типов со знаком и без знака
   lab8'.vcxproj -> C:\Users\Полина\source\repos\lab8'\Debug\lab8'.exe
