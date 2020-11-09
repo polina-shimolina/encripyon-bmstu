@@ -20,12 +20,22 @@ int main()
 	for (int i = 0; i < ct.size(); i++) {
 		if (ct[i] == 32)f++;
 	}
-	char* newmas = new char[f];
+	int* newmas = new int[f];
 	int k = 0;
 	for (int i = 0; i < ct.size(); i++) {
-		if (ct[i] != 32)newmas[k] += ct[i];
-		else k++;
+		if (ct[i] != 32) {
+			newmas[k] += (int)ct[i];
+			/*cout << (int)ct[i] << " ";*/
+		}
+		else {
+			k++;
+			/*cout << "    ";*/
+		}
 	}
+	/*for (int i = 0; i < f; i++) {
+		cout << (int)newmas[i] << " ";
+	}*/
+	cout << endl;
 	for (int i = 0; i < st.size(); i++) {
 
 		j = i;
@@ -35,7 +45,7 @@ int main()
 			while (j > k) {
 				j -= k;
 			}
-		newlet = ((int)st[i] + (int)newmas[j] % 256) % 256;
+		newlet = ((int)st[i] + newmas[j] % 256) % 256;
 		arr[i] = newlet + '0';
 		ar[i] = newlet;
 
