@@ -60,19 +60,18 @@ int main()
 	// двумерная матрица 256*256 слева исходный символ, сверху как зашифрован на пересечениях прибавлять 1, вывести все не равное нулю
 	int a[256][256] = {};
 	for (int i = 0; i < st.size(); i++) {
-		a[(int)st[i]+1][(int)arr[i]]++;
+		a[(int)st[i]][(int)arr[i]]++;
 	}
 	cout << endl;
 	for (int i = 0; i < 256; i++) {
-		cout << i<<" "<<(char)i;
+		cout << i << " " << (char)i;
 		for (int j = 0; j < 256; j++) {
 			if (a[i][j] != 0) {
-				cout << "  " << (char)j << " (" << a[i][j] << ")   ";
+				cout << "  " << (char)j << "  (" << a[i][j] << ")   ";
 			}
 		}
 		cout << endl;
 	}
 	return 0;
-
 }
 
